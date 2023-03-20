@@ -1,8 +1,12 @@
 body {
     font-family: 'Josefin Sans';
     background-color: #FFF;
+    width: 100%;
+
   }
-  
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     padding: 0px;
     margin: 0px;
@@ -12,6 +16,39 @@ body {
   
   ::-webkit-scrollbar {
     width: 0px;
+  }
+  .hero {
+    position: relative;
+    height: 100vh;
+  }
+  
+  .hero-background {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-image: url('./assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Add a blur effect to the background image */
+    z-index: -99999;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    /* z-index: 1; Place the hero content on top of the background */
+  }
+  
+  .hero-title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+
+    font-size: 4rem;
+    line-height: 4.5rem;
+    color: #FFFFFF;
   }
   
   .right-arrow,
@@ -53,15 +90,6 @@ body {
     height: 742px;
   }
   
-  .hero-banner-img {
-    position: absolute;
-    right: 40px;
-    top: 0px;
-    width: 700px;
-    height: 900px;
-    margin-top: -330px;
-  
-  }
   
   .exercise-card {
     width: 400px;
@@ -121,11 +149,6 @@ body {
     .right-arrow {
       position: static !important;
     }
-  
-    .hero-banner-img {
-      display: none;
-    }
-  
     .exercise-card {
       width: 320px;
     }
@@ -141,4 +164,17 @@ body {
     .exercise-card {
       width: 280px;
     }
+    .left-arrow,
+    .right-arrow {
+      display:none;
+    }
   }
+  @media (max-width: 767px) {
+    
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    
+  }
+ 
